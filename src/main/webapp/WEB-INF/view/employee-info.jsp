@@ -15,6 +15,8 @@
 <body>
     <h2>Employee Info</h2>
     <form:form action="saveEmployee" modelAttribute="employee">
+        <form:hidden path="id" />  <!-- Т.к. поле id будет заполнено благодаря скрытому полю, то мы можем обновлять и
+        сохранять данные одним view. Сохранение будет при id = 0, а при id, содержащимся в БД, мы будем обновляться -->
         <p>Name <form:input path="name"/></p>
         <p>Surname <form:input path="surname"/></p>
         <p>Department <form:input path="department"/></p>
